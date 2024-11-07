@@ -1,0 +1,11 @@
+tasks.register("greetingTask") {
+    doLast {
+        String nama = project.hasProperty('nama') ? project.property('nama') : 'Gradle User'
+        println "Hello, $nama ! Welcome to Gradle World!"
+    }
+}
+
+dependencies {
+    implementation 'com.google.guava:guava:29.0-jre'
+    testImplementation 'junit:junit:4.13'
+}
